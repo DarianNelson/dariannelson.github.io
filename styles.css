@@ -12,19 +12,22 @@
 }
 html, body{
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	font-size:18px;
-	line-height:30px;
-	color:#444;
+	font-size: 18px;
+	line-height: 30px;
+	color: #444;
 	text-shadow: 1px 1px 0px #fff
 }
 body{
-	text-align:center;
-	
+	text-align: center;
+	overflow-x: hidden;
 }
 h1{
 	font-size: 36px;
-	line-height:50px;
-	font-weight:bold;
+	line-height: 50px;
+	font-weight: bold;
+}
+h1 sub{
+	color: #aaa;
 }
 h2{
 	font-size: 24px;
@@ -43,6 +46,7 @@ img{
 }
 .hero{
 	height: 100vh;
+	min-height: 600px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -52,7 +56,7 @@ img{
 
 section{
 	border-top:2px dashed #eee;
-	padding:50px 0;
+	padding:50px 10px;
 	max-width: 800px;
 	margin: 0 auto;
 }
@@ -126,6 +130,14 @@ address{
 	text-align: right;
 	border-right-width:0;
 }
+@media(max-width: 500px) {
+	.blocklist > li {
+		display:block;
+		text-align:center !important;
+		border-width:0;
+		margin: 50px 0;
+	}
+}
 .prose{
 	text-align:justify;
 	max-width:500px;
@@ -143,6 +155,7 @@ address{
 	width: 100%;
 	display: flex;
 	position: fixed;
+	z-index: 9999;
 }
 .nav li{
 	list-style-type:none;
